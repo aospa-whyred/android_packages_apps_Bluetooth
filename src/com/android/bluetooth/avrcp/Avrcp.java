@@ -3828,7 +3828,7 @@ public final class Avrcp {
                 attrs[i] == MEDIA_ATTR_NUM_TRACKS)
                 cachereq = true;
         }
-        if (scope == SCOPE_NOW_PLAYING && cachereq) {
+        if (mMediaController != null && scope == SCOPE_NOW_PLAYING && cachereq) {
             Log.v(TAG,"scope now playing, caching req");
             if (mMediaController != null) {
                 mMediaController.getTransportControls().getRemoteControlClientNowPlayingEntries();
